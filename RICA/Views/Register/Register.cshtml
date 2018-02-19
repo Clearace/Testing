@@ -1,0 +1,39 @@
+﻿@model RICA.Models.Register
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+<form id="form1" runat="server">
+    <div style="position:relative">
+
+        Name :
+        @Html.TextBoxFor(c => c.stuname, new { @class = "form-control" })
+        <br />
+        Surname :
+        @Html.TextBoxFor(c => c.stusurname, new { @class = "form-control" })
+        <br />
+        ID No :
+        @Html.TextBoxFor(c => c.stuidno, new { @class = "form-control" })
+        <br />
+        Address :
+        @Html.TextAreaFor(c => c.stuaddress, new { @class = "form-control" })
+        <br />
+        Gender :
+        @Html.DropDownList("Gender", new List<SelectListItem> {
+            new SelectListItem{Text="Male" , Value="Male" },
+            new SelectListItem{Text="Female" , Value="Female" }
+            }, "Select Gender")
+    
+        <br /> <br />
+        Password :
+        @Html.Password("stupassword")
+       
+        <br />
+        <Button OnClick="submit" Text="submit" runat="server">Next</Button> 
+    </div>
+</form>
+
+
+

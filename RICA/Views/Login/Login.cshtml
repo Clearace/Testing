@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+@model RICA.Models.Login
+
+<h2>Login</h2>
+
+<form id="form1" runat="server">
+    <div style="position:relative">
+
+        Username :
+        @Html.TextBoxFor(c => c.username, new { @class = "form-control" })
+        <br />
+
+        Password :
+        @Html.TextBoxFor(c => c.password, new { @class = "form-control" })
+        <Button OnClick="submit" Text="submit" runat="server" />
+    </div>
+</form>
